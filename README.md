@@ -1,6 +1,9 @@
 FSharp.JsonSkippable
 ====================
 
+
+[![NuGet](https://img.shields.io/nuget/dt/FSharp.JsonSkippable.svg?style=flat)](https://www.nuget.org/packages/FSharp.JsonSkippable/) [![Build status](https://ci.appveyor.com/api/projects/status/cpc7ej4b31sstihx/branch/master?svg=true)](https://ci.appveyor.com/project/cmeeren/fsharp-jsonskippable/branch/master)
+
 JsonSkippable is an F# library for use with Newtonsoft.Json that allows you to easily differentiate between null and omitted JSON properties in a simple and strongly typed manner, for both serialization and deserialization.
 
 For optimal effect, use it together with a library that allows you to serialize `option ` as `null`, such as [Microsoft.FSharpLu.Json](https://github.com/Microsoft/fsharplu/wiki/FSharpLu.Json). You can also use FSharp.JsonSkippable on its own just to control the presence of properties when serializing and deserializing.
