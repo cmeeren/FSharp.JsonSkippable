@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net45;net47;netstandard2.0</TargetFrameworks>
+    <Authors>Christer van der Meeren</Authors>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Description>Simple strong typing of whether JSON properties are excluded or null.
+
+JsonSkippable is an F# library that allows you to simply differentiate between null and omitted JSON properties in a strongly typed manner, for both serialization and deserialization.</Description>
+    <PackageProjectUrl>https://github.com/cmeeren/FSharp.JsonSkippable</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/cmeeren/FSharp.JsonSkippable/blob/master/LICENSE</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/cmeeren/FSharp.JsonSkippable</RepositoryUrl>
+    <PackageTags>f# fsharp json serialization deserialization null</PackageTags>
+    <Copyright>Copyright 2018</Copyright>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="paket.references" />
+    <Compile Include="Skippable.fs" />
+    <Compile Include="Serialization.fs" />
+  </ItemGroup>
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
+</Project>

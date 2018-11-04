@@ -1,0 +1,18 @@
+source https://api.nuget.org/v3/index.json
+framework: auto-detect
+
+nuget FSharp.Core >= 4.1 redirects: force, lowest_matching: true
+nuget Microsoft.SourceLink.GitHub prerelease
+nuget Newtonsoft.Json >= 9 lowest_matching: true
+
+group Test
+  source https://api.nuget.org/v3/index.json
+  framework: auto-detect
+
+  nuget Hedgehog
+  nuget Hedgehog.Experimental
+  nuget Microsoft.NET.Test.Sdk
+  nuget TypeShape
+  nuget Unquote
+  nuget xunit.core
+  nuget xunit.runner.visualstudio version_in_path: true
