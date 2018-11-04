@@ -8,6 +8,27 @@ JsonSkippable is an F# library for use with Newtonsoft.Json that allows you to e
 
 For optimal effect, use it together with a library that allows you to serialize `option ` as `null`, such as [Microsoft.FSharpLu.Json](https://github.com/Microsoft/fsharplu/wiki/FSharpLu.Json). You can also use FSharp.JsonSkippable on its own just to control the presence of properties when serializing and deserializing.
 
+TL;DR
+-----
+
+This library defines the following type:
+
+```F#
+type Skippable<'T> =
+  | Skip
+  | Include of 'T
+```
+
+as well as a module with helper methods (`Skippable.map`, `Skippable.bind`, etc.) and a Newtonsoft.Json `ContractResolver` that manages the serialization and deserialization of the `Skippable` type.
+
+You can define your serializable types like this to have full control of whether to include or exclude properties:
+
+```F#
+type Example =
+  { A: int option Skippable
+    B: bool option Skippable }
+```
+
 Example
 -------
 
