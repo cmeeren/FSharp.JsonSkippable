@@ -14,10 +14,10 @@ Example
 open Newtonsoft.Json
 
 let settings =
-	JsonSerializerSettings(
-		ContractResolver = 
-			FSharp.JsonSkippable.Serialization.SkippableContractResolver()
-		)
+  JsonSerializerSettings(
+    ContractResolver = 
+      FSharp.JsonSkippable.Serialization.SkippableContractResolver()
+    )
 settings.Converters.Add(Microsoft.FSharpLu.Json.CompactUnionJsonConverter())
 let serialize x = JsonConvert.SerializeObject(x, settings)
 let deserialize<'a> x = JsonConvert.DeserializeObject<'a>(x, settings)
@@ -29,12 +29,12 @@ open FSharp.JsonSkippable
 
 [<CLIMutable>]
 type Example =
-	{ A: int option Skippable
-	  B: bool option Skippable }
-	  
-	  
+  { A: int option Skippable
+    B: bool option Skippable }
+    
+    
 // Example of serialization
-	  
+    
 let x1 = { A = Include (Some 2); B = Include (Some true) }
 let x1s = serialize x1  // {"A":2,"B":true}
 
