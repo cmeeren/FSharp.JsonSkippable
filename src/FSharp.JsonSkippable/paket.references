@@ -1,3 +1,5 @@
 FSharp.Core
 Newtonsoft.Json
-#Microsoft.SourceLink.GitHub
+
+group BuildDeps
+  Microsoft.SourceLink.GitHub

@@ -2,7 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <Authors>Christer van der Meeren</Authors>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -11,9 +11,9 @@
 JsonSkippable is an F# library that allows you to simply differentiate between null and omitted JSON properties in a strongly typed manner, for both serialization and deserialization.</Description>
     <PackageProjectUrl>https://github.com/cmeeren/FSharp.JsonSkippable</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/cmeeren/FSharp.JsonSkippable/blob/master/LICENSE</PackageLicenseUrl>
-    <RepositoryUrl>https://github.com/cmeeren/FSharp.JsonSkippable</RepositoryUrl>
     <PackageTags>f# fsharp json serialization deserialization null</PackageTags>
     <Copyright>Copyright 2018</Copyright>
+    <PackageReleaseNotes>Added SourceLink</PackageReleaseNotes>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
@@ -21,6 +21,7 @@ JsonSkippable is an F# library that allows you to simply differentiate between n
   <PropertyGroup>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningsAsErrors />
+    <NoWarn>FS2003</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <None Include="paket.references" />
